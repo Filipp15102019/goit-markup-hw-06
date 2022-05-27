@@ -405,7 +405,8 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 528px;
-  height: 581px;
+  /* height: 581px; */
+  padding: 40px;
   background-color: var(--primery-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -466,6 +467,133 @@ a {
   color: var(--secondary-text-color);
   transform: rotate(180deg) ;
 }
+
+/* modal form */
+.form-title{
+display: block;
+font-family: 'Roboto';
+font-weight: 700;
+font-size: 20px;
+line-height: 1.15px;
+text-align: center;
+letter-spacing: 0.03em;
+
+color: var(--main-text-color);
+margin-bottom: 30px;
+}
+
+.form-group,
+.form-policy-group{
+  display: block;
+  margin-bottom: 28px ;
+}
+.form-group{
+  position: relative;
+}
+.form-icon{
+  position: absolute;
+  bottom: 14px;
+  left: 15px;
+}
+.form-icon:focus{
+  fill: var(--accent-color);
+}
+.form-label{
+  /* display: block; */
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16px;
+  letter-spacing: 0.01em;
+  
+
+  color: #757575;
+}
+.form-input{
+  width: 100%;
+  padding: 12px;
+  padding-left: 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+.form-message{
+  width: 100%;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14px;
+  letter-spacing: 0.01em;
+  
+  outline: transparent;
+}
+.form-input:focus{
+  outline: 1px solid var(--accent-color);
+}
+.form-message:focus{
+  outline: 1px solid var(--accent-color);
+}
+.form-policy-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form-policy-desc{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.form-conf{
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+.custom-checkbox{
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid ;
+  outline-offset: -2px;
+  border-radius: 2px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked+.custom-checkbox{
+  background-color: var(--accent-color);
+}
+.custom-checkbox-icon{
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox:checked+.custom-checkbox 
+.custom-checkbox-icon{
+  opacity: 1;
+}
+.form-btn{
+ 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
+
+
 /* ***************** */
 /* Особенности */
 /* ***************** */
@@ -920,10 +1048,7 @@ margin-bottom: 50px;
   letter-spacing: 0.03em;
   transition:  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* .address-geo :hover,
-.address-geo :focus{
-  color: var(--accent-color);
-} */
+
 
 .address-contacts-footer {
   color: var(--footer-contacts-color);
@@ -957,6 +1082,7 @@ margin-bottom: 50px;
 }
 .social{
  margin-top: 12px;
+ margin-right: auto;
 }
 .link-team-footer{
   display: flex;
@@ -991,5 +1117,57 @@ margin-bottom: 50px;
 }
 .social-icon-footer{
   fill: var(--primery-white-color);
+}
+
+.social-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subject-form-footer{
+ 
+  color: var(--primery-white-color);
+
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+  
+}
+.label-email{
+  box-sizing: border-box;
+
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+.submit-button{
+  background-color: var(--accent-color);
+  font-family: 'Roboto';
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87px;
+  letter-spacing: 0.06em;
+  color: var(--primery-white-color);
+
+  margin-left: 12px;
+  padding: 10px 29px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.send-icon{
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
 }
 
